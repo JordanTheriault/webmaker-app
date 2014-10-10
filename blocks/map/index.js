@@ -24,11 +24,11 @@ module.exports = {
     },
     attached: function () {
         var L = require('leaflet');
-        var map = L.map('map');
-
-        L.tileLayer('http://{s}.tiles.mapbox.com/v3/MapID/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-            maxZoom: 18
+        L.Icon.Default.imagePath = '../../node_modules/leaflet/dist/images/';
+        var map = L.map('map').setView([43.07265,-89.400929], 10);
+        
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
     }
 };
