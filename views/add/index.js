@@ -19,7 +19,7 @@ module.exports = view.extend({
             blocks.phone,
 
             // Include spacers for missing blocks
-            undefined,
+            blocks.map,
             undefined,
 
             // Form / data blocks
